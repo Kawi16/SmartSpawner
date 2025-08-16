@@ -38,6 +38,9 @@ public class IntegrationManager {
     // Integration instances
     public AuraSkillsIntegration auraSkillsIntegration;
 
+    // Enchantments plugin
+    private boolean hasExcellentEnchants = false;
+
     public IntegrationManager(SmartSpawner plugin) {
         this.plugin = plugin;
     }
@@ -126,6 +129,11 @@ public class IntegrationManager {
                 return true;
             }
             return false;
+        }, true);
+
+        hasExcellentEnchants = checkPlugin("ExcellentEnchants", () -> {
+            Plugin ee = Bukkit.getPluginManager().getPlugin("ExcellentEnchants");
+            return ee != null && ee.isEnabled();
         }, true);
     }
 

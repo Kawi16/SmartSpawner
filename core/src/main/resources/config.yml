@@ -67,6 +67,11 @@ spawner_break:
     required: true      # Whether Silk Touch is needed to obtain spawners
     level: 1            # Minimum level of Silk Touch required
 
+  excellent-enchants:
+    enabled: false # Require ExcellentEnchants
+    enchants:
+      - "SILK_SPAWNER"
+
 #---------------------------------------------------
 #               Spawner Limitations
 #---------------------------------------------------
